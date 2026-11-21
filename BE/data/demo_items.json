@@ -1,0 +1,218 @@
+[
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-백엔드-TRAINING-1",
+    "title": "[가상] 부산 백엔드 웹 실습 개발 교육 1",
+    "organization": "가상 백엔드 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-백엔드-TRAINING-2",
+    "title": "[가상] 부산 백엔드 웹 실습 개발 교육 2",
+    "organization": "가상 백엔드 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-백엔드-JOB-1",
+    "title": "[가상] 부산 백엔드 개발 신입 채용 1",
+    "organization": "가상 백엔드 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-백엔드-JOB-2",
+    "title": "[가상] 부산 백엔드 개발 신입 채용 2",
+    "organization": "가상 백엔드 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-데이터-TRAINING-1",
+    "title": "[가상] 부산 데이터 웹 실습 데이터 교육 1",
+    "organization": "가상 데이터 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-데이터-TRAINING-2",
+    "title": "[가상] 부산 데이터 웹 실습 데이터 교육 2",
+    "organization": "가상 데이터 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-데이터-JOB-1",
+    "title": "[가상] 부산 데이터 데이터 신입 채용 1",
+    "organization": "가상 데이터 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-데이터-JOB-2",
+    "title": "[가상] 부산 데이터 데이터 신입 채용 2",
+    "organization": "가상 데이터 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-디자인-TRAINING-1",
+    "title": "[가상] 부산 디자인 웹 실습 디자인 교육 1",
+    "organization": "가상 디자인 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "TRAINING",
+    "source": "WORK24",
+    "external_id": "demo-디자인-TRAINING-2",
+    "title": "[가상] 부산 디자인 웹 실습 디자인 교육 2",
+    "organization": "가상 디자인 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": "2026-12-01",
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-디자인-JOB-1",
+    "title": "[가상] 부산 디자인 디자인 신입 채용 1",
+    "organization": "가상 디자인 기관1",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-11",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  },
+  {
+    "item_type": "JOB",
+    "source": "YOUTH_JOB",
+    "external_id": "demo-디자인-JOB-2",
+    "title": "[가상] 부산 디자인 디자인 신입 채용 2",
+    "organization": "가상 디자인 기관2",
+    "url": "https://example.invalid/demo",
+    "region": "부산",
+    "published_at": "2026-11-12",
+    "starts_at": null,
+    "ends_at": "2026-12-31",
+    "raw_data": {
+      "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
+      "경력구분": "신입"
+    },
+    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "date_basis": "등록일 (가상)"
+  }
+]
