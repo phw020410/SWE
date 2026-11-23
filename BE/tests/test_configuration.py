@@ -27,7 +27,7 @@ def test_demo_configuration_uses_existing_be_fe_layout(configurator):
     assert not (root / "backend").exists()
 
 
-@pytest.mark.parametrize("job_key", ["ALIO_SERVICE_KEY", "DATA_GOKR_SERVICE_KEY"])
+@pytest.mark.parametrize("job_key", ["ALIO_SERVICE_KEY"])
 def test_live_accepts_either_issuer_specific_job_key_without_printing_secrets(configurator, job_key, capsys):
     configure, root = configurator
     keys = root / "test-keys.txt"

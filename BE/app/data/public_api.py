@@ -82,7 +82,10 @@ class EmploymentApiClient:
                 async with asyncio.timeout(self.settings.data_timeout_seconds):
                     records = await (self._trainings(intent) if kind == "TRAINING" else self._jobs(intent))
             except (httpx.HTTPError, TimeoutError, ValueError, TypeError, KeyError) as exc:
-                log.error(json.dumps({"event": "data_source_failure", "requestId": request_id.get(), "source": source, "errorType": type(exc).__name__}))
+                # 상태 코드만 남기고 URL·본문은 남기지 않는다(키 노출 방지).
+                status = exc.response.status_code if isinstance(exc, httpx.HTTPStatusError) else None
+                log.error(json.dumps({"event": "data_source_failure", "requestId": request_id.get(), "source": source,
+                                      "errorType": type(exc).__name__, "status": status}))
                 raise DataSourceError() from exc
             notice = "훈련 API는 등록일을 제공하지 않아 훈련 시작일로 정렬합니다." if kind == "TRAINING" else ""
         records = rank(records, intent)
@@ -114,23 +117,18 @@ class EmploymentApiClient:
 
     async def _jobs(self, intent):
         host = urlsplit(self.settings.youth_job_api_url).hostname
-        # 발급 사이트가 다른 키를 임의로 전달하지 않는다. 공공데이터포털용 키는 별도 설정한다.
-        if host == "apis.data.go.kr":
-            key = self.settings.data_gokr_service_key.get_secret_value()
-        elif host == "opendata.alio.go.kr":
-            key = self.settings.alio_service_key.get_secret_value()
-        else:
+        # ALIO 발급 키는 ALIO 오픈데이터 호스트에만 전달한다.
+        if host != "opendata.alio.go.kr":
             raise DataSourceError()
+        key = self.settings.alio_service_key.get_secret_value()
         if not key:
             raise DataSourceError()
-        params = {self.settings.youth_job_auth_param: unquote(key), "resultType": "json", "numOfRows": "100", "pageNo": "1", "workRgnLst": "R3014", "ongoingYn": "Y"}
-        if intent.interests:
-            params["recrutPbancTtl"] = intent.interests[0]
-        if intent.experience == "ENTRY":
-            params["recrutSe"] = "R2010,R2030"
+        # ALIO list.do는 POST form 요청을 받는다. 키가 URL(접근 로그)에 남지 않도록 본문으로만 보낸다.
+        # 지역(부산)·관심분야·신입 조건은 응답을 받은 뒤 normalizers.job()과 rank()에서 거른다.
+        form = {self.settings.youth_job_auth_param: unquote(key), "resultType": "json", "numOfRows": "100", "pageNo": "1", "ongoingYn": "Y"}
         result = []
         for page in range(1, self.settings.upstream_pages + 1):
-            response = await self.client.get(self.settings.youth_job_api_url, params={**params, "pageNo": str(page)}, timeout=self.settings.data_timeout_seconds)
+            response = await self.client.post(self.settings.youth_job_api_url, data={**form, "pageNo": str(page)}, timeout=self.settings.data_timeout_seconds)
             response.raise_for_status()
             obj = response.json()
             if str(obj.get("resultCode", "00")) not in {"00", "0", "200", "NORMAL_SERVICE"}:

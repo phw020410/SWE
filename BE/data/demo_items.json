@@ -50,7 +50,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   },
   {
@@ -68,7 +68,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   },
   {
@@ -122,7 +122,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   },
   {
@@ -140,7 +140,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   },
   {
@@ -194,7 +194,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   },
   {
@@ -212,7 +212,7 @@
       "안내": "학습용 가상 정보. 실제 모집 공고가 아닙니다.",
       "경력구분": "신입"
     },
-    "terms_url": "https://www.data.go.kr/data/15125273/openapi.do",
+    "terms_url": "https://opendata.alio.go.kr/",
     "date_basis": "등록일 (가상)"
   }
 ]

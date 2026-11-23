@@ -5,7 +5,7 @@ from app.privacy import mask, safe_url
 from app.schemas import RecommendedItem
 
 WORK24_TERMS = "https://www.work24.go.kr/cm/e/a/0110/selectOpenApiIntro.do"
-ALIO_TERMS = "https://www.data.go.kr/data/15125273/openapi.do"
+ALIO_TERMS = "https://opendata.alio.go.kr/"
 
 
 def date_value(value):

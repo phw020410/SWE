@@ -19,19 +19,18 @@ class Settings(BaseSettings):
     data_provider: Literal["live", "fixture"] = "live"
     gemini_api_key: SecretStr = SecretStr("")
     gemini_intent_model: str = "gemini-3.5-flash-lite"
-    gemini_answer_model: str = "gemini-3.8-flash"
+    gemini_answer_model: str = "gemini-3.5-flash-lite"
     gemini_image_model: str = "gemini-3.8-flash"
     work24_auth_key: SecretStr = SecretStr("")
     alio_service_key: SecretStr = SecretStr("")
-    data_gokr_service_key: SecretStr = SecretStr("")
     work24_api_url: str = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do"
-    youth_job_api_url: str = "https://apis.data.go.kr/1051000/recruitment/list"
-    youth_job_detail_url: str = "https://apis.data.go.kr/1051000/recruitment/detail"
+    youth_job_api_url: str = "https://opendata.alio.go.kr/new/v1/recruit/list.do"
+    youth_job_detail_url: str = "https://opendata.alio.go.kr/new/v1/recruit/detail.do"
     youth_job_auth_param: str = "serviceKey"
     cache_ttl_seconds: int = 21600
     request_timeout_seconds: float = Field(default=10, gt=0, le=10)
-    intent_timeout_seconds: float = 3
-    answer_timeout_seconds: float = 6
+    intent_timeout_seconds: float = 10
+    answer_timeout_seconds: float = 10
     data_timeout_seconds: float = 3
     max_image_bytes: int = 5 * 1024 * 1024
     cpu_threshold: float = 90
