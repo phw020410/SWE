@@ -3,9 +3,35 @@ services:
     name: swe-fastapi
     runtime: python
     plan: free
+    rootDir: BE
     buildCommand: pip install -r requirements.txt
-    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    startCommand: python -m uvicorn app.main:app --host 0.0.0.0 --port $PORT --no-access-log
     healthCheckPath: /health
+    autoDeployTrigger: checksPass
     envVars:
       - key: PYTHON_VERSION
-        value: 3.12.7
+        value: 3.12.14
+      - key: APP_ENV
+        value: production
+      - key: STORAGE_BACKEND
+        value: supabase
+      - key: AI_PROVIDER
+        value: gemini
+      - key: DATA_PROVIDER
+        value: live
+      - key: ENABLE_DEMO_ITEMS
+        value: "false"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: WORK24_AUTH_KEY
+        sync: false
+      - key: ALIO_SERVICE_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false

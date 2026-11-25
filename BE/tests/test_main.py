@@ -1,17 +1,12 @@
-from fastapi.testclient import TestClient
-
-from app.main import app
-
-client = TestClient(app)
-
-
-def test_root():
+def test_root(environment):
+    client, _, _ = environment
     res = client.get("/")
     assert res.status_code == 200
     assert res.json() == {"message": "Hello, FastAPI!"}
 
 
-def test_item_crud():
+def test_item_crud(environment):
+    client, _, _ = environment
     res = client.post("/items", json={"name": "Pen", "price": 1.5})
     assert res.status_code == 201
     item_id = res.json()["id"]
@@ -25,6 +20,7 @@ def test_item_crud():
     assert client.get(f"/items/{item_id}").status_code == 404
 
 
-def test_invalid_price():
+def test_invalid_price(environment):
+    client, _, _ = environment
     res = client.post("/items", json={"name": "Bad", "price": -1})
     assert res.status_code == 422
