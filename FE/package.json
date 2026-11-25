@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "busan-ieum-fe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dompurify": "^3.4.18",
+    "marked": "^18.2.1",
     "react": "^19.3.1",
-    "react-dom": "^19.3.1"
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.6"
   },
   "devDependencies": {
     "@types/node": "^24.19.2",
