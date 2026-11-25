@@ -1,7 +1,7 @@
 import type { ApiErrorBody } from './types'
 
 /** Vercel 환경변수 VITE_API_BASE_URL (예: https://swe-fastapi.onrender.com). 비밀 키는 FE에 두지 않는다. */
-export const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? 'http://127.0.0.1:8000').replace(/\/+$/, '')
+export const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL ?? 'https://swe-towu.onrender.com').replace(/\/+$/, '')
 
 export class ApiError extends Error {
   readonly status: number
