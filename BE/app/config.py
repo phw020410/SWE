@@ -20,7 +20,7 @@ class Settings(BaseSettings):
     gemini_api_key: SecretStr = SecretStr("")
     gemini_intent_model: str = "gemini-3.5-flash-lite"
     gemini_answer_model: str = "gemini-3.5-flash-lite"
-    gemini_image_model: str = "gemini-3.8-flash"
+    gemini_image_model: str = "gemini-3.5-flash-lite"
     work24_auth_key: SecretStr = SecretStr("")
     alio_service_key: SecretStr = SecretStr("")
     work24_api_url: str = "https://www.work24.go.kr/cm/openApi/call/hr/callOpenApiSvcInfo310L01.do"
@@ -30,8 +30,8 @@ class Settings(BaseSettings):
     cache_ttl_seconds: int = 21600
     request_timeout_seconds: float = Field(default=10, gt=0, le=10)
     intent_timeout_seconds: float = 10
-    answer_timeout_seconds: float = 10
-    data_timeout_seconds: float = 3
+    answer_timeout_seconds: float = 30
+    data_timeout_seconds: float = 10
     max_image_bytes: int = 5 * 1024 * 1024
     cpu_threshold: float = 90
     cpu_high_seconds: float = 5
