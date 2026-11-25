@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     youth_job_detail_url: str = "https://opendata.alio.go.kr/new/v1/recruit/detail.do"
     youth_job_auth_param: str = "serviceKey"
     cache_ttl_seconds: int = 21600
-    request_timeout_seconds: float = Field(default=10, gt=0, le=10)
+    request_timeout_seconds: float = Field(default=20, gt=0, le=20)
     intent_timeout_seconds: float = 10
     answer_timeout_seconds: float = 30
     data_timeout_seconds: float = 10
